@@ -257,7 +257,7 @@ async def callbacks(_, cq: CallbackQuery):
             await cq.answer("» ᴛʀᴀᴄᴋ sᴋɪᴘᴘᴇᴅ ʙᴀʙʏ.")
 
 
-@bot.on_message(filters.command("start") & filters.private)
+@bot.on_message(filters.command("vcstart") & filters.private)
 async def start_private(_, message):
     msg = START_TEXT.format(message.from_user.mention)
     await message.reply_photo(photo = START_IMG,
@@ -274,7 +274,7 @@ async def help_cmd(_, message):
 async def start_group(_, message):
     await message.delete()
     fuk = "<b>ᴩᴏɴɢ ʙᴀʙʏ !</b>"
-    await message.reply_photo(photo="https://telegra.ph/file/d6ff45f5be2b42fcc2ffb.jpg", caption=fuk)
+    await message.reply_photo(photo="https://te.legra.ph/file/a270fe46a14ebc3dac0db.jpg", caption=fuk)
 
 
 @bot.on_message(filters.command(["join", "userbotjoin", "assistant", "ass"]) & filters.group)
@@ -306,7 +306,7 @@ async def video_play(_, message):
     if chat_id in LIVE_CHATS:
         return await message.reply_text("» ᴩʟᴇᴀsᴇ sᴇɴᴅ <code>/end</code> ᴛᴏ ᴇɴᴅ ᴛʜᴇ ᴏɴɢᴏɪɴɢ ʟɪᴠᴇ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ sᴏɴɢs ᴀɢᴀɪɴ.")
     
-    m = await message.reply_text("**» sᴇᴀʀᴄʜɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ʙᴀʙʏ...**")
+    m = await message.reply_text("**» sᴇᴀʀᴄʜɪɴɢ🧐 ᴘʟᴇᴀsᴇ🥺 ᴡᴀɪᴛ😩 ʙᴀʙʏ👻...**")
     if state == "play":
         damn = AudioPiped
         ded = yt_audio
@@ -463,7 +463,7 @@ async def end(_, message):
     if chat_id in LIVE_CHATS:
         await app.leave_group_call(chat_id)
         LIVE_CHATS.remove(chat_id)
-        return await message.reply_text("» sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙᴀʙʏ.")
+        return await message.reply_text("» sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙᴀʙʏ😥.")
         
     if chat_id in QUEUE:
         await app.leave_group_call(chat_id)
